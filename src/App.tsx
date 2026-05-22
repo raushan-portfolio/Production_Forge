@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 
 
-import brandlogo1 from "./assets/brands/Crack_Intake.png";
 
 // Custom Tiktok icon as it might be missing in older Lucide versions
 const TiktokIcon = ({ className }: { className?: string }) => (
@@ -196,7 +195,7 @@ const ALL_GRAPHICS = [
 ];
 
 const CLIENTS_DATA = [
-  { name: "Crack Intake", logoText: null, logoImageUrl: brandlogo1 },
+  { name: "Crack Intake", logoText: null, logoImageUrl: "src/assets/brands/Crack.png" },
   { name: "Dolphin Education", logoText: null, logoImageUrl: "src/assets/brands/Dolphin.png" },
   { name: "Dustynep", logoText: null, logoImageUrl: "src/assets/brands/Dustynep.png" },
   { name: "Seed Academy", logoText: null, logoImageUrl: "src/assets/brands/Seed.png" },
