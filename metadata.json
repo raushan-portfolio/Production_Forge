@@ -1,0 +1,8 @@
+{
+  "name": "FORGE Production",
+  "description": "Premium media agency specializing in video production, graphic design, and brand identity for high-ticket real estate and corporate brands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

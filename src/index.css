@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-forge-dark: #050505;
+  --color-forge-gray: #111827;
+  
+  --background-forge: radial-gradient(circle at top right, rgba(255, 90, 0, 0.15), transparent 40%), radial-gradient(circle at bottom left, rgba(239, 68, 68, 0.1), transparent 40%), #050505;
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@utility forge-gradient {
+  background: var(--background-forge);
+}
+
+@utility text-gradient {
+  background: linear-gradient(135deg, #ff5a00, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility play-btn {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 90, 0, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 90, 0, 0.4);
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-forge-dark text-gray-100 antialiased;
+}
