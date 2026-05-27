@@ -12,39 +12,6 @@ import {
   FileText, ShieldCheck, Clock, Award, Search
 } from "lucide-react";
 
-// --- STATIC ASSET IMPORTS FOR ES MODULE CONVENTIONS ---
-import forgeLogo from "/forge_logo.png";
-import protocolBg from "./assets/POST 8.jpg";
-
-// Video thumbnails
-import video1Thumb from "./assets/thumb/video1.png";
-import video2Thumb from "./assets/thumb/video2.png";
-import video3Thumb from "./assets/thumb/video3.png";
-import video4Thumb from "./assets/thumb/video4.png";
-
-// Graphics images
-import designConsultancy from "./assets/post/Consultancy Design.jpg";
-import designBag from "./assets/post/Bag 1.jpg";
-import designWatch from "./assets/post/watch design.png";
-import designProperty from "./assets/post/design 1.jpg";
-import designHeadphone from "./assets/post/headphone.jpg";
-import designPost1 from "./assets/post/POST 1.jpg";
-import designPost4 from "./assets/post/POST 4.jpg";
-import designPasni from "./assets/post/pasni 2.jpg";
-import designDoc from "./assets/post/documentary.jpg";
-
-// Client Logos
-import crackLogo from "./assets/brands/Crack.png";
-import dolphinLogo from "./assets/brands/Dolphin.png";
-import dustynepLogo from "./assets/brands/Dustynep.png";
-import seedLogo from "./assets/brands/Seed.png";
-import tminnzyLogo from "./assets/brands/Tminnzy.png";
-
-// Team Leaders
-import teamRaushan from "./assets/team/Raushan.jpeg";
-import teamSuman from "./assets/team/Suman.jpeg";
-import teamBishal from "./assets/team/Bishal.jpeg";
-
 // Custom Tiktok icon as it might be missing in older Lucide versions
 const TiktokIcon = ({ className }: { className?: string }) => (
   <svg 
@@ -145,16 +112,16 @@ const BRAND_CONFIG = {
     facebook: "https://www.facebook.com/forgeproduction1/",
     tiktok: "https://www.tiktok.com/@forge.production"
   },
-  logoImageUrl: forgeLogo,
-  protocolImageUrl: protocolBg
+  logoImageUrl: "/forge_logo.png",
+  protocolImageUrl: "/assets/POST 8.jpg"
 };
 
 // --- PORTFOLIO DATA ---
 const FEATURED_VIDEOS = [
-  { title: "Dynamic Lead Generation", description: "High-impact commercial video showcasing motion graphics, text overlays, and optimized pacing for consultancy brands.", driveId: "1TWN_cMMsYGr3_Sc3m6C-m48NrSmj2q7c", category: "COMMERCIAL AD", thumbnailUrl: video1Thumb },
-  { title: "Cinematic Makeover Reel", description: "High-retention commercial lifestyle ad featuring dynamic split-cuts, premium product styling, and structured pacing for salon brands.", driveId: "1hVRcsyChUO_mZPeS0HKbOjlN3qqNDhU7", category: "BRAND TRANSFORMATION", thumbnailUrl: video2Thumb },
-  { title: "Product Showcase Reel", description: "A crisp commercial feature highlighting advanced blue-light filters, macro product details, and feature-driven pacing for eyewear brands.", driveId: "1vfpqwh_JfeSriPfg_trELZjQM9jLNsO_", category: "COMMERCIAL AD", thumbnailUrl: video3Thumb },
-  { title: "Interactive Contest Reel", description: "A promotional campaign feature showcasing bold kinetic graphics, target audience filters, and incentive-driven conversion tactics.", driveId: "1I8ikM1yqaSNiFkBFapuZ61XGcXnvpG23", category: "CAMPAIGN AD", thumbnailUrl: video4Thumb }
+  { title: "Dynamic Lead Generation", description: "High-impact commercial video showcasing motion graphics, text overlays, and optimized pacing for consultancy brands.", driveId: "1TWN_cMMsYGr3_Sc3m6C-m48NrSmj2q7c", category: "COMMERCIAL AD", thumbnailUrl: "/assets/thumb/video1.png" },
+  { title: "Cinematic Makeover Reel", description: "High-retention commercial lifestyle ad featuring dynamic split-cuts, premium product styling, and structured pacing for salon brands.", driveId: "1hVRcsyChUO_mZPeS0HKbOjlN3qqNDhU7", category: "BRAND TRANSFORMATION", thumbnailUrl: "/assets/thumb/video2.png" },
+  { title: "Product Showcase Reel", description: "A crisp commercial feature highlighting advanced blue-light filters, macro product details, and feature-driven pacing for eyewear brands.", driveId: "1vfpqwh_JfeSriPfg_trELZjQM9jLNsO_", category: "COMMERCIAL AD", thumbnailUrl: "/assets/thumb/video3.png" },
+  { title: "Interactive Contest Reel", description: "A promotional campaign feature showcasing bold kinetic graphics, target audience filters, and incentive-driven conversion tactics.", driveId: "1I8ikM1yqaSNiFkBFapuZ61XGcXnvpG23", category: "CAMPAIGN AD", thumbnailUrl: "/assets/thumb/video4.png" }
 ];
 
 const ALL_GRAPHICS = [
@@ -163,72 +130,72 @@ const ALL_GRAPHICS = [
     description: "Premium typography grid and high-conversion ad copies optimized for commercial client education aesthetics.", 
     tag: "BRAND NARRATIVE & IDENTITY", 
     gradient: "bg-gradient-to-br from-amber-600/30 to-black",
-    imageUrl: designConsultancy
+    imageUrl: "/assets/post/Consultancy Design.jpg"
   },
   { 
     title: "Merchandise Framework", 
     description: "Clean product and retail pack presentation displaying high-fidelity physical assets with studio-grade lighting.", 
     tag: "BRAND REVEAL", 
     gradient: "bg-gradient-to-br from-orange-600/30 to-black",
-    imageUrl: designBag
+    imageUrl: "/assets/post/Bag 1.jpg"
   },
   { 
     title: "Minimalist Product Ad", 
     description: "Studio-grade product display design leveraging vibrant monochrome aesthetics and direct conversion UI placement.", 
     tag: "PRODUCT AD CREATIVE", 
     gradient: "bg-gradient-to-br from-red-600/30 to-black",
-    imageUrl: designWatch
+    imageUrl: "/assets/post/watch design.png"
   },
   { 
     title: "Architectural Prestige", 
     description: "High-end property showcase integrating luxury sky backdrops, crisp typography, and conversions-focused branding layouts.", 
     tag: "REAL ESTATE MEDIA", 
     gradient: "bg-gradient-to-br from-blue-600/30 to-black",
-    imageUrl: designProperty
+    imageUrl: "/assets/post/design 1.jpg"
   },
   { 
     title: "Premium Product Launch", 
     description: "Bold high-fidelity promotional asset combining industrial textures, dynamic angles, and high-impact e-commerce styling.", 
     tag: "E-COMMERCE HERO", 
     gradient: "bg-gradient-to-br from-emerald-600/30 to-black",
-    imageUrl: designHeadphone
+    imageUrl: "/assets/post/headphone.jpg"
   },
   { 
     title: "Regional Impact Banner", 
     description: "High-contrast marketing creative blending pop-culture authority with bold local language engagement hooks.", 
     tag: "SOCIAL DISRUPTION", 
     gradient: "bg-gradient-to-br from-purple-600/30 to-black",
-    imageUrl: designPost1
+    imageUrl: "/assets/post/POST 1.jpg"
   },
   { 
     title: "Elite Identity Setup", 
     description: "Premium brand placement utilizing hyper-focused lighting and corporate chess metaphors for strategic positioning.", 
     tag: "COMMERCIAL CAMPAIGN", 
     gradient: "bg-gradient-to-br from-pink-600/30 to-black",
-    imageUrl: designPost4
+    imageUrl: "/assets/post/POST 4.jpg"
   },
   { 
     title: "Heritage Event Kit", 
     description: "Elegant monochrome design layout crafted for high-end traditional events and premium studio photography portfolios.", 
     tag: "CULTURAL NARRATIVE", 
     gradient: "bg-gradient-to-br from-amber-800/30 to-black",
-    imageUrl: designPasni
+    imageUrl: "/assets/post/pasni 2.jpg"
   },
   { 
     title: "Academic Legacy Film", 
     description: "A premium narrative documentary capturing international student success stories with high-fidelity corporate brand aesthetic.", 
     tag: "DOCUMENTARY", 
     gradient: "bg-gradient-to-br from-gray-600/30 to-black",
-    imageUrl: designDoc
+    imageUrl: "/assets/post/documentary.jpg"
   }
 ];
 
 const CLIENTS_DATA = [
-  { name: "Crack Intake", logoText: null, logoImageUrl: crackLogo },
-  { name: "Dolphin Education", logoText: null, logoImageUrl: dolphinLogo },
-  { name: "Dustynep", logoText: null, logoImageUrl: dustynepLogo },
-  { name: "Seed Academy", logoText: null, logoImageUrl: seedLogo },
-  { name: "Tminnzy", logoText: null, logoImageUrl: tminnzyLogo }
+  { name: "Crack Intake", logoText: null, logoImageUrl: "/assets/brands/Crack.png" },
+  { name: "Dolphin Education", logoText: null, logoImageUrl: "/assets/brands/Dolphin.png" },
+  { name: "Dustynep", logoText: null, logoImageUrl: "/assets/brands/Dustynep.png" },
+  { name: "Seed Academy", logoText: null, logoImageUrl: "/assets/brands/Seed.png" },
+  { name: "Tminnzy", logoText: null, logoImageUrl: "/assets/brands/Tminnzy.png" }
 ];
 
 // --- LEADERSHIP DATA ---
@@ -236,20 +203,20 @@ const LEADERSHIP_DATA = [
   { 
     name: "Raushan Sharma", 
     role: "Founder", 
-    imageUrl: teamRaushan,
-    bio: "Drives creative direction and premium brand systems, specializing in high-end cinematic and architectural motion." 
+    imageUrl: "/assets/team/Raushan.jpeg",
+    bio: "Drives creative direction and premium brand systems, specializing in high-end cinematic and architectural motion."
   },
   { 
     name: "Suman Giri", 
     role: "Production Lead", 
-    imageUrl: teamSuman, 
-    bio: "Executes high-fidelity on-set production, mastering complex camera dynamics and advanced 3D transitions." 
+    imageUrl: "/assets/team/Suman.jpeg", 
+    bio: "Executes high-fidelity on-set production, mastering complex camera dynamics and advanced 3D transitions."
   },
   { 
     name: "Bishal Puri", 
     role: "Post-Production Lead", 
-    imageUrl: teamBishal, 
-    bio: "Oversees premium editing, color grading, and strategic pacing for high-retention commercial ads." 
+    imageUrl: "/assets/team/Bishal.jpeg", 
+    bio: "Oversees premium editing, color grading, and strategic pacing for high-retention commercial ads."
   }
 ];
 
@@ -277,11 +244,11 @@ interface VideoItemProps {
 
 function VideoCard({ title, description, driveId, category, thumbnailUrl }: VideoItemProps) {
   const [isPlaying, setIsPlaying] = useState(false);
-
+  
   const videoSrc = driveId.startsWith('http') 
     ? (driveId.includes('/view') ? driveId.replace('/view', '/preview') : driveId)
     : `https://drive.google.com/file/d/${driveId}/preview`;
-
+    
   const autoplaySrc = `${videoSrc}?autoplay=1`;
 
   return (
@@ -341,7 +308,7 @@ interface GraphicItemProps {
 
 function GraphicCard({ title, description, tag, gradient, imageUrl }: GraphicItemProps) {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   return (
     <>
       <motion.div 
@@ -423,13 +390,13 @@ interface ArticleProps {
 
 export function ArticleCard({ title, excerpt, content, date }: ArticleProps) {
   const [isReaderOpen, setIsReaderOpen] = useState(false);
-
+  
   const finalDate = date || new Date().toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
     year: 'numeric'
   });
-
+  
   const calculateReadTime = (text: string) => {
     const wordsPerMinute = 200;
     const words = text.split(/\s+/).filter(word => word.length > 0).length;
@@ -438,7 +405,7 @@ export function ArticleCard({ title, excerpt, content, date }: ArticleProps) {
   };
 
   const autoReadTime = calculateReadTime(content + " " + excerpt);
-
+  
   return (
     <>
       <motion.div 
@@ -673,7 +640,7 @@ export default function App() {
             <NavContent />
           </motion.div>
         )}
-      </AnimatePresence>
+       </AnimatePresence>
 
       <main>
         {currentPage === 'landing' && (
@@ -710,7 +677,7 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
                 className="flex flex-wrap justify-center gap-6"
-              >
+               >
                 <button onClick={() => setCurrentPage('videos')} className="bg-white text-black px-12 py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] hover:bg-amber-500 transition-all shadow-xl">
                   Explore Works
                 </button>
@@ -731,13 +698,13 @@ export default function App() {
                     key={i} 
                     whileHover={{ scale: 1.1, opacity: 1 }}
                     className="flex flex-col items-center justify-center min-w-[80px]"
-                  >
+                   >
                     <div className="mb-2">
                       {c.logoImageUrl ? (
                         <img src={c.logoImageUrl} alt={c.name} className="h-8 md:h-10 w-auto object-contain brightness-100 opacity-100" />
                       ) : (
                         <div className="text-3xl md:text-4xl font-black tracking-tighter text-white font-display">
-                          {c.logoText}
+                           {c.logoText}
                         </div>
                       )}
                     </div>
@@ -805,7 +772,7 @@ export default function App() {
                 {featuredGraphics.map((graphic, i) => (
                   <GraphicCard key={i} {...graphic} />
                 ))}
-              </motion.div>
+               </motion.div>
 
               <div className="mt-16 text-center">
                 <button 
@@ -844,7 +811,7 @@ export default function App() {
                     <p className="text-[11px] text-gray-500 leading-relaxed font-medium">{s.desc}</p>
                   </motion.div>
                 ))}
-              </div>
+               </div>
             </section>
 
             {/* Working Overview (Process) */}
@@ -939,7 +906,6 @@ export default function App() {
                     let isDragging = false;
                     const startX = e.pageX - slider.offsetLeft;
                     const scrollLeft = slider.scrollLeft;
-
                     const handleMouseMove = (moveEvent: MouseEvent) => {
                       if (!isDragging) {
                         if (Math.abs(moveEvent.pageX - (startX + slider.offsetLeft)) > 5) {
@@ -956,7 +922,6 @@ export default function App() {
                         slider.scrollLeft = scrollLeft - walk;
                       }
                     };
-
                     const handleMouseUp = () => {
                       if (isDragging) {
                         slider.style.scrollSnapType = 'x mandatory';
@@ -1081,13 +1046,13 @@ export default function App() {
                 className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 hover:text-amber-500 transition-colors mb-8 inline-flex items-center gap-2"
               >
                 <X className="w-3 h-3" /> Back to Home
-              </button>
+               </button>
               <h1 className="text-5xl md:text-7xl font-black font-display text-white tracking-tight mb-4">VISUAL SYSTEMS</h1>
               <p className="text-gray-500 uppercase text-[10px] tracking-[0.4em] font-bold">Digital Identity & Brand Architecture</p>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allGraphics.map((graphic, i) => (
+               {allGraphics.map((graphic, i) => (
                 <GraphicCard 
                   key={i} 
                   title={graphic.title}
@@ -1106,7 +1071,7 @@ export default function App() {
              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-24">
                <h1 className="text-6xl font-black font-display text-white tracking-tight mb-8">FORGING IDENTITY</h1>
                <p className="text-gray-400 text-lg leading-[1.8] font-medium italic">
-                "We don't just produce videos; we architect visual dominance. Based in Nepal and serving high-ticket brands globally, FORGE Production is a multidisciplinary agency focused on the intersection of cinema and commerce."
+                 "We don't just produce videos; we architect visual dominance. Based in Nepal and serving high-ticket brands globally, FORGE Production is a multidisciplinary agency focused on the intersection of cinema and commerce."
                </p>
              </motion.div>
 
@@ -1116,7 +1081,7 @@ export default function App() {
                   <p className="text-sm text-gray-400 leading-loose">To empower premium brands and consultancies with cinematic assets that command authority, elevate market presence, and drive high-value revenue through strategic storytelling.</p>
                 </div>
                 <div className="glass p-10 rounded-3xl">
-                  <h3 className="text-xl font-bold font-display text-orange-500 uppercase tracking-widest mb-6">Our Vision</h3>
+                   <h3 className="text-xl font-bold font-display text-orange-500 uppercase tracking-widest mb-6">Our Vision</h3>
                   <p className="text-sm text-gray-400 leading-loose">To become the global benchmark for high-end corporate identity and premium brand media, transforming raw footage into high-end art that redefines luxury storytelling.</p>
                 </div>
              </div>
@@ -1155,7 +1120,7 @@ export default function App() {
 
       {/* Enhanced Footer */}
       <footer id="contact" className="px-10 py-24 border-t border-white/5 bg-black/40">
-        <div className="max-w-6xl mx-auto">
+         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 mb-20 text-center md:text-left">
             <div className="lg:col-span-1">
               <div className="flex flex-col items-center md:items-start mb-6">
@@ -1228,7 +1193,7 @@ export default function App() {
                <button onClick={() => setCurrentPage('terms')} className="hover:text-gray-500 transition-colors uppercase">Terms of Service</button>
             </div>
           </div>
-        </div>
+         </div>
       </footer>
     </div>
   );
