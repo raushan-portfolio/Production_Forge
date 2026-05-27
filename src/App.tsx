@@ -12,7 +12,38 @@ import {
   FileText, ShieldCheck, Clock, Award, Search
 } from "lucide-react";
 
+// --- STATIC ASSET IMPORTS FOR ES MODULE CONVENTIONS ---
+import forgeLogo from "/forge_logo.png";
+import protocolBg from "./assets/POST 8.jpg";
 
+// Video thumbnails
+import video1Thumb from "./assets/thumb/video1.png";
+import video2Thumb from "./assets/thumb/video2.png";
+import video3Thumb from "./assets/thumb/video3.png";
+import video4Thumb from "./assets/thumb/video4.png";
+
+// Graphics images
+import designConsultancy from "./assets/post/Consultancy Design.jpg";
+import designBag from "./assets/post/Bag 1.jpg";
+import designWatch from "./assets/post/watch design.png";
+import designProperty from "./assets/post/design 1.jpg";
+import designHeadphone from "./assets/post/headphone.jpg";
+import designPost1 from "./assets/post/POST 1.jpg";
+import designPost4 from "./assets/post/POST 4.jpg";
+import designPasni from "./assets/post/pasni 2.jpg";
+import designDoc from "./assets/post/documentary.jpg";
+
+// Client Logos
+import crackLogo from "./assets/brands/Crack.png";
+import dolphinLogo from "./assets/brands/Dolphin.png";
+import dustynepLogo from "./assets/brands/Dustynep.png";
+import seedLogo from "./assets/brands/Seed.png";
+import tminnzyLogo from "./assets/brands/Tminnzy.png";
+
+// Team Leaders
+import teamRaushan from "./assets/team/Raushan.jpeg";
+import teamSuman from "./assets/team/Suman.jpeg";
+import teamBishal from "./assets/team/Bishal.jpeg";
 
 // Custom Tiktok icon as it might be missing in older Lucide versions
 const TiktokIcon = ({ className }: { className?: string }) => (
@@ -114,18 +145,16 @@ const BRAND_CONFIG = {
     facebook: "https://www.facebook.com/forgeproduction1/",
     tiktok: "https://www.tiktok.com/@forge.production"
   },
-  // Set to a URL for an image logo, or stay null to use the text logo
-  logoImageUrl: "/forge_logo.png",
-  // Image for the "Our Protocol" section (72 Hours box)
-  protocolImageUrl: "src/assets/POST 8.jpg" 
+  logoImageUrl: forgeLogo,
+  protocolImageUrl: protocolBg
 };
 
 // --- PORTFOLIO DATA ---
 const FEATURED_VIDEOS = [
-  { title: "Dynamic Lead Generation", description: "High-impact commercial video showcasing motion graphics, text overlays, and optimized pacing for consultancy brands.", driveId: "1TWN_cMMsYGr3_Sc3m6C-m48NrSmj2q7c", category: "COMMERCIAL AD", thumbnailUrl: "src/assets/thumb/video1.png" },
-  { title: "Cinematic Makeover Reel", description: "High-retention commercial lifestyle ad featuring dynamic split-cuts, premium product styling, and structured pacing for salon brands.", driveId: "1hVRcsyChUO_mZPeS0HKbOjlN3qqNDhU7", category: "BRAND TRANSFORMATION", thumbnailUrl: "src/assets/thumb/video2.png" },
-  { title: "Product Showcase Reel", description: "A crisp commercial feature highlighting advanced blue-light filters, macro product details, and feature-driven pacing for eyewear brands.", driveId: "1vfpqwh_JfeSriPfg_trELZjQM9jLNsO_", category: "COMMERCIAL AD", thumbnailUrl: "src/assets/thumb/video3.png" },
-  { title: "Interactive Contest Reel", description: "A promotional campaign feature showcasing bold kinetic graphics, target audience filters, and incentive-driven conversion tactics.", driveId: "1I8ikM1yqaSNiFkBFapuZ61XGcXnvpG23", category: "CAMPAIGN AD", thumbnailUrl: "src/assets/thumb/video4.png" }
+  { title: "Dynamic Lead Generation", description: "High-impact commercial video showcasing motion graphics, text overlays, and optimized pacing for consultancy brands.", driveId: "1TWN_cMMsYGr3_Sc3m6C-m48NrSmj2q7c", category: "COMMERCIAL AD", thumbnailUrl: video1Thumb },
+  { title: "Cinematic Makeover Reel", description: "High-retention commercial lifestyle ad featuring dynamic split-cuts, premium product styling, and structured pacing for salon brands.", driveId: "1hVRcsyChUO_mZPeS0HKbOjlN3qqNDhU7", category: "BRAND TRANSFORMATION", thumbnailUrl: video2Thumb },
+  { title: "Product Showcase Reel", description: "A crisp commercial feature highlighting advanced blue-light filters, macro product details, and feature-driven pacing for eyewear brands.", driveId: "1vfpqwh_JfeSriPfg_trELZjQM9jLNsO_", category: "COMMERCIAL AD", thumbnailUrl: video3Thumb },
+  { title: "Interactive Contest Reel", description: "A promotional campaign feature showcasing bold kinetic graphics, target audience filters, and incentive-driven conversion tactics.", driveId: "1I8ikM1yqaSNiFkBFapuZ61XGcXnvpG23", category: "CAMPAIGN AD", thumbnailUrl: video4Thumb }
 ];
 
 const ALL_GRAPHICS = [
@@ -134,72 +163,72 @@ const ALL_GRAPHICS = [
     description: "Premium typography grid and high-conversion ad copies optimized for commercial client education aesthetics.", 
     tag: "BRAND NARRATIVE & IDENTITY", 
     gradient: "bg-gradient-to-br from-amber-600/30 to-black",
-    imageUrl: "src/assets/post/Consultancy Design.jpg" // Add your local image path here like "/assets/graphics/visa.jpg"
+    imageUrl: designConsultancy
   },
   { 
     title: "Merchandise Framework", 
     description: "Clean product and retail pack presentation displaying high-fidelity physical assets with studio-grade lighting.", 
     tag: "BRAND REVEAL", 
     gradient: "bg-gradient-to-br from-orange-600/30 to-black",
-    imageUrl: "src/assets/post/Bag 1.jpg" // Add your local image path here like "/assets/graphics/corporate_identity.jpg"
+    imageUrl: designBag
   },
   { 
     title: "Minimalist Product Ad", 
     description: "Studio-grade product display design leveraging vibrant monochrome aesthetics and direct conversion UI placement.", 
     tag: "PRODUCT AD CREATIVE", 
     gradient: "bg-gradient-to-br from-red-600/30 to-black",
-    imageUrl: "src/assets/post/watch design.png" // Add your local image path here like "/assets/graphics/admission_banner.jpg"
+    imageUrl: designWatch
   },
   { 
     title: "Architectural Prestige", 
     description: "High-end property showcase integrating luxury sky backdrops, crisp typography, and conversions-focused branding layouts.", 
     tag: "REAL ESTATE MEDIA", 
     gradient: "bg-gradient-to-br from-blue-600/30 to-black",
-    imageUrl: "src/assets/post/design 1.jpg" // Add your local image path here like "/assets/graphics/poster_series.jpg"
+    imageUrl: designProperty
   },
   { 
     title: "Premium Product Launch", 
     description: "Bold high-fidelity promotional asset combining industrial textures, dynamic angles, and high-impact e-commerce styling.", 
     tag: "E-COMMERCE HERO", 
     gradient: "bg-gradient-to-br from-emerald-600/30 to-black",
-    imageUrl: "src/assets/post/headphone.jpg" // Add your local image path here like "/assets/graphics/brand_guidelines.jpg"
+    imageUrl: designHeadphone
   },
   { 
     title: "Regional Impact Banner", 
     description: "High-contrast marketing creative blending pop-culture authority with bold local language engagement hooks.", 
     tag: "SOCIAL DISRUPTION", 
     gradient: "bg-gradient-to-br from-purple-600/30 to-black",
-    imageUrl: "src/assets/post/POST 1.jpg" // Add your local image path here like "/assets/graphics/annual_report.jpg"
+    imageUrl: designPost1
   },
   { 
     title: "Elite Identity Setup", 
     description: "Premium brand placement utilizing hyper-focused lighting and corporate chess metaphors for strategic positioning.", 
     tag: "COMMERCIAL CAMPAIGN", 
     gradient: "bg-gradient-to-br from-pink-600/30 to-black",
-    imageUrl: "src/assets/post/POST 4.jpg" // Add your local image path here like "/assets/graphics/podcast_branding.jpg"
+    imageUrl: designPost4
   },
   { 
     title: "Heritage Event Kit", 
     description: "Elegant monochrome design layout crafted for high-end traditional events and premium studio photography portfolios.", 
     tag: "CULTURAL NARRATIVE", 
     gradient: "bg-gradient-to-br from-amber-800/30 to-black",
-    imageUrl: "src/assets/post/pasni 2.jpg" // Add your local image path here like "/assets/graphics/event_poster.jpg"
+    imageUrl: designPasni
   },
   { 
     title: "Academic Legacy Film", 
     description: "A premium narrative documentary capturing international student success stories with high-fidelity corporate brand aesthetic.", 
     tag: "DOCUMENTARY", 
     gradient: "bg-gradient-to-br from-gray-600/30 to-black",
-    imageUrl: "src/assets/post/documentary.jpg" // Add your local image path here like "/assets/graphics/social_media_kit.jpg"
+    imageUrl: designDoc
   }
 ];
 
 const CLIENTS_DATA = [
-  { name: "Crack Intake", logoText: null, logoImageUrl: "src/assets/brands/Crack.png" },
-  { name: "Dolphin Education", logoText: null, logoImageUrl: "src/assets/brands/Dolphin.png" },
-  { name: "Dustynep", logoText: null, logoImageUrl: "src/assets/brands/Dustynep.png" },
-  { name: "Seed Academy", logoText: null, logoImageUrl: "src/assets/brands/Seed.png" },
-  { name: "Tminnzy", logoText: null, logoImageUrl: "src/assets/brands/Tminnzy.png" }
+  { name: "Crack Intake", logoText: null, logoImageUrl: crackLogo },
+  { name: "Dolphin Education", logoText: null, logoImageUrl: dolphinLogo },
+  { name: "Dustynep", logoText: null, logoImageUrl: dustynepLogo },
+  { name: "Seed Academy", logoText: null, logoImageUrl: seedLogo },
+  { name: "Tminnzy", logoText: null, logoImageUrl: tminnzyLogo }
 ];
 
 // --- LEADERSHIP DATA ---
@@ -207,28 +236,22 @@ const LEADERSHIP_DATA = [
   { 
     name: "Raushan Sharma", 
     role: "Founder", 
-    imageUrl: "src/assets/team/Raushan.jpeg", // Add path like "/assets/team/raushan.jpg"
+    imageUrl: teamRaushan,
     bio: "Drives creative direction and premium brand systems, specializing in high-end cinematic and architectural motion." 
   },
   { 
     name: "Suman Giri", 
     role: "Production Lead", 
-    imageUrl: "src/assets/team/Suman.jpeg", 
+    imageUrl: teamSuman, 
     bio: "Executes high-fidelity on-set production, mastering complex camera dynamics and advanced 3D transitions." 
   },
   { 
     name: "Bishal Puri", 
     role: "Post-Production Lead", 
-    imageUrl: "src/assets/team/Bishal.jpeg", 
+    imageUrl: teamBishal, 
     bio: "Oversees premium editing, color grading, and strategic pacing for high-retention commercial ads." 
   }
 ];
-
-// const fadeIn = {
-//   initial: { opacity: 0, y: 20 },
-//   animate: { opacity: 1, y: 0 },
-//   transition: { duration: 0.6 }
-// };
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -244,51 +267,12 @@ const staggerContainer = {
   }
 };
 
-// interface VideoItemProps {
-//   title: string;
-//   description: string;
-//   driveId: string;
-//   category?: string;
-// }
-
-// function VideoCard({ title, description, driveId, category }: VideoItemProps) {
-//   return (
-//     <motion.div 
-//       variants={fadeIn}
-//       className="glass p-5 rounded-xl group transition-all duration-300 hover:border-amber-500/30 flex flex-col h-full"
-//     >
-//       <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-950 relative">
-//         <iframe 
-//           src={driveId.startsWith('http') ? driveId : `https://drive.google.com/file/d/${driveId}/preview`} 
-//           width="100%" 
-//           height="100%" 
-//           allow="autoplay" 
-//           allowFullScreen
-//           className="opacity-80 group-hover:opacity-100 transition-opacity"
-//         />
-//         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-//            <div className="play-btn scale-75 group-hover:scale-100 transition-transform duration-500">
-//              <Play className="w-5 h-5 text-black fill-black ml-1" />
-//            </div>
-//         </div>
-//         {category && (
-//           <div className="absolute top-3 left-3 bg-amber-500 text-black px-2 py-0.5 text-[8px] uppercase tracking-widest rounded-sm font-black backdrop-blur-sm">
-//             {category}
-//           </div>
-//         )}
-//       </div>
-//       <h4 className="text-base font-bold mt-5 font-display tracking-tight text-white">{title}</h4>
-//       <p className="text-[11px] text-gray-500 mt-2 leading-relaxed flex-grow">{description}</p>
-//     </motion.div>
-//   );
-// }
-
 interface VideoItemProps {
   title: string;
   description: string;
   driveId: string;
   category?: string;
-  thumbnailUrl?: string; // <-- FIX: Yahan '?' laga diya taaki ye optional ho jaye aur crash na kare
+  thumbnailUrl?: string;
 }
 
 function VideoCard({ title, description, driveId, category, thumbnailUrl }: VideoItemProps) {
@@ -306,8 +290,6 @@ function VideoCard({ title, description, driveId, category, thumbnailUrl }: Vide
       className="glass p-5 rounded-xl group transition-all duration-300 hover:border-amber-500/30 flex flex-col h-full"
     >
       <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-950 relative">
-        
-        {/* FIX: Agar isPlaying true ho YA fir galti se thumbnailUrl na ho, toh direct iframe load ho jaye */}
         {isPlaying || !thumbnailUrl ? (
           <iframe 
             src={isPlaying ? autoplaySrc : videoSrc}
@@ -327,11 +309,9 @@ function VideoCard({ title, description, driveId, category, thumbnailUrl }: Vide
               alt={`${title} Thumbnail`} 
               className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-500 scale-100 group-hover:scale-105"
             />
-
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-60" />
-
             <div className="absolute inset-0 flex items-center justify-center">
-               <div className="play-btn scale-75 group-hover:scale-100 transition-transform duration-500 shadow-xl">
+               <div className="play-btn scale-75 group-hover:scale-100 transition-transform duration-500 shadow-xl w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center">
                  <Play className="w-5 h-5 text-black fill-black ml-1" />
                </div>
             </div>
@@ -351,39 +331,6 @@ function VideoCard({ title, description, driveId, category, thumbnailUrl }: Vide
   );
 }
 
-// interface GraphicItemProps {
-//   title: string;
-//   description: string;
-//   tag: string;
-//   gradient: string;
-//   imageUrl?: string | null;
-// }
-
-// function GraphicCard({ title, description, tag, gradient, imageUrl }: GraphicItemProps) {
-//   return (
-//     <motion.div 
-//       variants={fadeIn}
-//       className="glass rounded-xl p-5 group transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/30 flex flex-col h-full w-full"
-//     >
-//       <div className={`aspect-video rounded-lg ${gradient} flex items-center justify-center relative overflow-hidden mb-4`}>
-//         {imageUrl ? (
-//           <img src={imageUrl} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-//         ) : (
-//           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.5)_100%)]" />
-//         )}
-//         <span className="text-[10px] text-zinc-100 tracking-widest font-mono z-10 opacity-70 uppercase bg-black/60 px-2 py-1 backdrop-blur-md rounded">
-//           {tag.split(':')[1]?.trim() || tag}
-//         </span>
-//       </div>
-//       <h4 className="font-bold text-sm font-display flex items-center justify-between tracking-tight text-white">
-//         {title}
-//         <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all text-amber-500" />
-//       </h4>
-//       <p className="text-[11px] text-gray-500 mt-2 leading-relaxed flex-grow">{description}</p>
-//     </motion.div>
-//   );
-// }
-
 interface GraphicItemProps {
   title: string;
   description: string;
@@ -393,23 +340,19 @@ interface GraphicItemProps {
 }
 
 function GraphicCard({ title, description, tag, gradient, imageUrl }: GraphicItemProps) {
-  // State to track if the popup modal is open
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* 1. Main Grid Card Component */}
       <motion.div 
         variants={fadeIn}
         className="glass rounded-xl p-5 group transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/30 flex flex-col h-full w-full"
       >
-        {/* Aspect Video wrapper box with active click listener */}
         <div 
           onClick={() => imageUrl && setIsOpen(true)}
           className={`aspect-video rounded-lg ${gradient} flex items-center justify-center relative overflow-hidden mb-4 ${imageUrl ? 'cursor-zoom-in' : ''}`}
         >
           {imageUrl ? (
-            /* FIX: Full dynamic cover grid containment handles structural constraints */
             <img 
               src={imageUrl} 
               alt={title} 
@@ -424,7 +367,6 @@ function GraphicCard({ title, description, tag, gradient, imageUrl }: GraphicIte
           </span>
         </div>
 
-        {/* Dynamic Typography and Navigation Layout Links */}
         <h4 className="font-bold text-sm font-display flex items-center justify-between tracking-tight text-white">
           {title}
           <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all text-amber-500" />
@@ -432,17 +374,15 @@ function GraphicCard({ title, description, tag, gradient, imageUrl }: GraphicIte
         <p className="text-[11px] text-gray-500 mt-2 leading-relaxed flex-grow">{description}</p>
       </motion.div>
 
-      {/* 2. Premium Elite Lightbox Popup Modal */}
       <AnimatePresence>
         {isOpen && imageUrl && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)} // Close modal if user clicks backdrop context layers
+            onClick={() => setIsOpen(false)}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 md:p-10 cursor-zoom-out"
           >
-            {/* Safe Close Button Controller Overlay */}
             <button 
               onClick={() => setIsOpen(false)}
               className="absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition-all"
@@ -450,22 +390,19 @@ function GraphicCard({ title, description, tag, gradient, imageUrl }: GraphicIte
               <X className="w-5 h-5" />
             </button>
 
-            {/* High Fidelity Large Scale Display Layout Context */}
             <motion.div
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="relative max-w-5xl max-h-[85vh] rounded-lg overflow-hidden flex flex-col items-center justify-center shadow-2xl"
-              onClick={(e) => e.stopPropagation()} // Prevents accidental closing when graphics image asset container is clicked
+              onClick={(e) => e.stopPropagation()}
             >
               <img 
                 src={imageUrl} 
                 alt={title} 
                 className="max-w-full max-h-[80vh] object-contain rounded-md border border-white/5 shadow-2xl" 
               />
-              
-              {/* Context Text Overlay underneath graphic frame limits */}
               <div className="mt-3 text-center pointer-events-none">
                 <p className="text-xs text-white/80 font-medium tracking-wide">{title}</p>
               </div>
@@ -477,52 +414,22 @@ function GraphicCard({ title, description, tag, gradient, imageUrl }: GraphicIte
   );
 }
 
-// interface ArticleProps {
-//   title: string;
-//   excerpt: string;
-//   date: string;
-//   readTime: string;
-// }
-
-// function ArticleCard({ title, excerpt, date, readTime }: ArticleProps) {
-//   return (
-//     <motion.div 
-//       variants={fadeIn}
-//       className="glass p-6 rounded-xl hover:border-amber-500/20 transition-all cursor-pointer group flex flex-col h-full"
-//     >
-//       <div className="flex items-center gap-3 text-[10px] text-gray-500 uppercase tracking-widest mb-4">
-//         <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {readTime}</span>
-//         <span className="w-1 h-1 bg-gray-700 rounded-full" />
-//         <span>{date}</span>
-//       </div>
-//       <h4 className="text-lg font-bold font-display text-white mb-3 group-hover:text-amber-500 transition-colors">{title}</h4>
-//       <p className="text-[12px] text-gray-500 leading-[1.8] flex-grow mb-6">{excerpt}</p>
-//       <div className="flex items-center gap-2 text-amber-500 text-[10px] font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
-//         Read Full Strategy <ChevronRight className="w-4 h-4" />
-//       </div>
-//     </motion.div>
-//   );
-// }
-
 interface ArticleProps {
   title: string;
   excerpt: string;
-  content: string; // <-- 1. Added full body text content here
-  date?: string;   // Optional: If blank, it will auto-take current date
+  content: string;
+  date?: string;
 }
 
 export function ArticleCard({ title, excerpt, content, date }: ArticleProps) {
-  // State controller to toggle full screen strategy reader
   const [isReaderOpen, setIsReaderOpen] = useState(false);
 
-  // 2. AUTO-DYNAMIC DATE LOGIC: If date missing, auto-generate today's neat format
   const finalDate = date || new Date().toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
     year: 'numeric'
   });
 
-  // 3. AUTO-DYNAMIC READ TIME LOGIC: Counts words and estimates time (Avg 200 words/min)
   const calculateReadTime = (text: string) => {
     const wordsPerMinute = 200;
     const words = text.split(/\s+/).filter(word => word.length > 0).length;
@@ -534,7 +441,6 @@ export function ArticleCard({ title, excerpt, content, date }: ArticleProps) {
 
   return (
     <>
-      {/* Clickable Master Grid Card */}
       <motion.div 
         variants={fadeIn}
         onClick={() => setIsReaderOpen(true)}
@@ -556,13 +462,11 @@ export function ArticleCard({ title, excerpt, content, date }: ArticleProps) {
           {excerpt}
         </p>
         
-        {/* Call to Action Trigger Anchor */}
         <div className="flex items-center gap-2 text-amber-500 text-[10px] font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
           Read Full Strategy <ChevronRight className="w-4 h-4" />
         </div>
       </motion.div>
 
-      {/* Premium Strategy Article Modal Overlay */}
       <AnimatePresence>
         {isReaderOpen && (
           <motion.div
@@ -572,7 +476,6 @@ export function ArticleCard({ title, excerpt, content, date }: ArticleProps) {
             onClick={() => setIsReaderOpen(false)}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-10 cursor-zoom-out"
           >
-            {/* Native Close Framework Button */}
             <button 
               onClick={() => setIsReaderOpen(false)}
               className="absolute top-6 right-6 text-white/60 hover:text-white bg-white/5 hover:bg-white/10 p-2.5 rounded-full transition-all"
@@ -580,31 +483,26 @@ export function ArticleCard({ title, excerpt, content, date }: ArticleProps) {
               <X className="w-5 h-5" />
             </button>
 
-            {/* Strategic Typography Content Container */}
             <motion.div
               initial={{ scale: 0.96, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.96, y: 20 }}
               transition={{ type: "spring", damping: 30, stiffness: 350 }}
-              onClick={(e) => e.stopPropagation()} // Stop propagation layer collapse
+              onClick={(e) => e.stopPropagation()}
               className="bg-zinc-950 border border-white/5 p-6 md:p-12 rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto cursor-default custom-scrollbar shadow-2xl"
             >
-              {/* Top Meta Details bar */}
               <div className="flex items-center gap-3 text-[10px] text-amber-500 uppercase tracking-widest mb-4 font-mono">
                 <span>{autoReadTime}</span>
                 <span className="w-1.5 h-1.5 bg-zinc-800 rounded-full" />
                 <span className="text-gray-500">{finalDate}</span>
               </div>
 
-              {/* Strategy Header Document Title */}
               <h2 className="text-2xl md:text-3xl font-bold font-display text-white tracking-tight mb-6 leading-tight">
                 {title}
               </h2>
 
-              {/* Divider Interface element */}
               <div className="h-[1px] w-full bg-gradient-to-r from-amber-500/20 via-transparent to-transparent mb-8" />
 
-              {/* Rich Body Content Markdown Structure */}
               <div className="text-zinc-400 text-sm leading-[1.9] space-y-6 font-normal tracking-wide">
                 {content.split('\n\n').map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
@@ -816,7 +714,7 @@ export default function App() {
                 <button onClick={() => setCurrentPage('videos')} className="bg-white text-black px-12 py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] hover:bg-amber-500 transition-all shadow-xl">
                   Explore Works
                 </button>
-                <a href="https://wa.me/9779866716548" className="glass px-12 py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] hover:border-amber-500/50 transition-all">
+                <a href={`https://wa.me/${BRAND_CONFIG.whatsapp}`} className="glass px-12 py-5 rounded-sm font-black text-xs uppercase tracking-[0.2em] hover:border-amber-500/50 transition-all">
                   Get Strategy
                 </a>
               </motion.div>
